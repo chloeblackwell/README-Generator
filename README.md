@@ -17,12 +17,25 @@ SO THAT I can quickly create a professional README for a new project
 * VS Code (https://code.visualstudio.com/)
 * Terminal 
 
+## Installation 
+
+To generate the README, first run npm install to install the following packages that are dependancies which is stated in the package.json file. 
+
+* inquirer
+* axios
+
+The application itself can be invoked with the following command. 
+
+node index.js 
+
 ## Screenshots & Video 
 
 
+## Usage 
 
+When you run node index.js, this appliction uses inquirer to prompt the user in the command line with a series of questions about your application and Github. <br>
+The application takes these responses and runs axios to fetch your Github profile from the Github API. After the application has your Github information, it will then generate the markdown file based from the responses the user has given. 
 ## License
-
 
 
 ## Author 
