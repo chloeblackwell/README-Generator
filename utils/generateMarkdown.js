@@ -99,7 +99,7 @@ function generateMarkdown(responses, userInfo) {
 
   let questionsSection =
     `
-  ---
+
   
   ## Questions?
   
