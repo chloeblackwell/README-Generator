@@ -2,7 +2,7 @@
 const axios = require("axios");
 
 const api = {
-    async getUser(responses) {
+    async getUserInfo(responses) {
         try {
             let response = await axios
 
