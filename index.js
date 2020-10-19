@@ -82,7 +82,7 @@ async function init() {
         const markdown = generateMarkdown(responses, userInfo);
         console.log(markdown);
 
-        await writeFileAsync("ExampleREADME.md", markdown);
+        await writeFileAsync("Sample-README.md", markdown);
     }
     catch (error) {
         console.log(error)
