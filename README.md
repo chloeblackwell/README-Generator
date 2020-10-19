@@ -42,6 +42,8 @@ The application takes these responses and runs axios to fetch your Github profil
 
 ## License
 
+This application does not have a license. 
+
 ## Author
 
 Chloe Blackwell<br>
