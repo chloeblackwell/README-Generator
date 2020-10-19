@@ -3,7 +3,7 @@ const util = require("util");
 const Choices = require("inquirer/lib/objects/choices");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
-//const api = require("./utils/api");
+const api = require("./utils/api");
 
 // array of questions for user
 const questions = [
@@ -11,6 +11,11 @@ const questions = [
         type: "input",
         name: "github",
         message: "What is your Github username?"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "What is your email?"
     },
     {
         type: "input",
@@ -25,12 +30,12 @@ const questions = [
     {
         type: "input",
         name: "installation",
-        message: "How do you install your application?"
+        message: "If applicable, how do you install your application?"
     },
     {
         type: "input",
         name: "usage",
-        message: "How do you use your application?"
+        message: "If applicable, how do you use your application?"
     },
     {
         type: "checkbox",
@@ -41,12 +46,12 @@ const questions = [
     {
         type: "input",
         name: "contributing",
-        message: "How can others contribute to your application?"
+        message: "If applicable, how can others contribute to your application?"
     },
     {
         type: "input",
         name: "tests",
-        message: "Provide any tests written for your project"
+        message: "If applicable, provide any tests written for your project"
     }
 ];
 
@@ -71,13 +76,13 @@ async function init() {
         const responses = await inquirer.prompt(questions);
         console.log("Your responses: ", responses);
 
-        //const userInfo = await api.apiCall(responses);
-        //console.log("Your gitHub user info: ", userInfo);
+        const userInfo = await api.getUser(responses);
+        console.log("Your gitHub user info: ", userInfo);
 
-        const markdown = generateMarkdown(responses);
+        const markdown = generateMarkdown(responses, userInfo);
         console.log(markdown);
 
-        await writeFileAsync("README.md", markdown);
+        await writeFileAsync("ExampleREADME.md", markdown);
     }
     catch (error) {
         console.log(error)

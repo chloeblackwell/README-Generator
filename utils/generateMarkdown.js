@@ -103,19 +103,16 @@ function generateMarkdown(responses, userInfo) {
   
   ## Questions?
   
-  ![Developer Profile Picture](${userInfo.avatar_url}) 
   
   For any questions, please contact me with the information below:
  
   GitHub: [@${userInfo.login}](${userInfo.url})
   `;
 
-  if (userInfo.email !== null) {
-
-    questionsSection +=
-      `
-  Email: ${userInfo.email}
-  `};
+  questionsSection +=
+    `
+  Email: ${responses.email}
+  `
 
   readmeFile += questionsSection;
 
