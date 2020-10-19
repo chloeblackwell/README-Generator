@@ -4,7 +4,7 @@ For this assignment, we were tasked to make a command line application that gene
 
 ## Contents 
 
-This application consists of 
+This application consists of 1 main page, index.js and 2 pages inside the utils folder, generateMarkdown.js and api.js. It also has a package.json for the modules that are used, which are inquirer and axios. 
 
 ## User Story 
 
@@ -19,7 +19,11 @@ SO THAT I can quickly create a professional README for a new project
 
 ## Screenshots & Video 
 
+
+
 ## License
+
+
 
 ## Author 
 
